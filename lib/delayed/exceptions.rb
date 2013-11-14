@@ -6,4 +6,7 @@ module Delayed
       "#{super} (Delayed::Worker.max_run_time is only #{Delayed::Worker.max_run_time.to_i} seconds)"
     end
   end
+  
+  class FatalBackendError < StandardError
+  end
 end
